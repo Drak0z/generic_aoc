@@ -30,11 +30,13 @@
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
-						<Label text="Day 1: ..." />
+						<Label text="Day 1: Sedrick is odd... really odd." />
 						<Button fx:id="1test1" onAction="#genericQuestion"
 							userData="1" text="test" />
+						<Button fx:id="1test2" onAction="#genericQuestion"
+							userData="1" text="test2" />
 						<Button fx:id="1part1" onAction="#genericQuestion"
-							userData="1" text="part1" />
+							userData="1" text="solve" />
 					</children>
 				</HBox>
 
