@@ -19,33 +19,21 @@ public class AoQ2023Controller extends GenericController {
 		  );
 	
 	Map<String, String> genericHeaderPartsMap = Map.of("test" , "Test Input", "test2", "Test Input 2");
-	// 0
-	int d = 0;
-	headers.put(d, "Day 0: Hello World.");
+	// -1
+	int d = -1;
+	headers.put(d, "Day -1: Hello World.");
 	headerParts.put(d, new HashMap<>(Map.of("part1", "Part 1: What is the value of \"x\" that the bot used in their program that would have produced the provided output?"
 				))
 	);
 	files.put(d, genericFileMap);
 	headerParts.get(d).putAll(genericHeaderPartsMap);
 	
-	// 1
+	// 0	
 	d++;
-	headers.put(d, "Day 2: Rock Paper Scisors.");
-	headerParts.put(d, new HashMap<>(Map.of("part1", "Part 1: What would your total score be if everything goes exactly according to your strategy guide?"
-              			, "part2", "Part 2: What would your total score be if everything goes exactly according to your strategy guide?"
-				))
+	headers.put(d, "Day 0: What Will He Eat Next? Where Will He Eat Next??");
+	headerParts.put(d, new HashMap<>(Map.of("solve", "Where will Sedrick most likely strike next? (Answer in all lower case, and leave out \"The\")"))
 	);
-	files.put(d, genericFileMap);
-	headerParts.get(d).putAll(genericHeaderPartsMap);
-	
-	// 2
-	d++;
-	headers.put(d, "Day 3: Rucksack Reorganization.");
-	headerParts.put(d, new HashMap<>(Map.of("part1", "Part 1: Find the item type that appears in both compartments of each rucksack. What is the sum of the priorities of those item types?"
-              			, "part2", "Part 2: ..."
-				))
-	);
-	files.put(d, genericFileMap);
+	files.put(d, Map.of("solve", "eatenKgs.csv"));
 	headerParts.get(d).putAll(genericHeaderPartsMap);
     }
 

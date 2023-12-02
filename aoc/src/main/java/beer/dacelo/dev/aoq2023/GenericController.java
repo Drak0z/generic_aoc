@@ -32,7 +32,8 @@ public abstract class GenericController {
     public void genericQuestion(ActionEvent event, int day) {
 	Day question = null;
 	try {
-	    question = (Day) Class.forName(getModule() + ".Day" + day).getDeclaredConstructor().newInstance();
+	    String className = ("Day" + day).replace("-", "_");
+	    question = (Day) Class.forName(getModule() + "." + className).getDeclaredConstructor().newInstance();
 	} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
 		| NoSuchMethodException | SecurityException | ClassNotFoundException e) {
 	    // TODO Auto-generated catch block
@@ -52,6 +53,8 @@ public abstract class GenericController {
 	    n = 2;
 	    break;
 	}
+	
+	System.out.println("Solving: " + question.getClass());
 	
 	String path = getPathPrefix() + question.getClass().getSimpleName().toLowerCase() + "\\" + files.get(day).get(partButtonText);
 	String title = "Solved " + question.getClass().getSimpleName();
