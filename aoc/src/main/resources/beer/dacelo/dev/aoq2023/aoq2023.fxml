@@ -39,6 +39,13 @@
 							userData="1" text="solve" />
 					</children>
 				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 2: Prime Feeding Time!" />
+						<Button fx:id="1part1" onAction="#genericQuestion"
+							userData="2" text="solve" />
+					</children>
+				</HBox>
 
 				<HBox spacing="20.0">
 					<children>

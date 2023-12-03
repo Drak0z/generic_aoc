@@ -6,13 +6,7 @@ import java.util.Map;
 public class AoC2022Controller extends GenericController {
         
     public AoC2022Controller() {
-	Map<String, String> genericFileMap = Map.of("test","test_input.txt"
-                                		  , "test2","test_input.txt"
-                                		  , "part1", "input.txt"
-                                  		  , "part2", "input.txt"
-		  );
-	
-	Map<String, String> genericHeaderPartsMap = Map.of("test" , "Test Input", "test2", "Test Input 2");
+	super();
 	// 1
 	int d = 1;
 	headers.put(d, "Day 1: Calorie Counting.");
@@ -20,8 +14,6 @@ public class AoC2022Controller extends GenericController {
               			, "part2", "Part 2: Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?"
 				))
 	);
-	files.put(d, genericFileMap);
-	headerParts.get(d).putAll(genericHeaderPartsMap);
 	
 	// 2
 	d++;
@@ -30,8 +22,6 @@ public class AoC2022Controller extends GenericController {
               			, "part2", "Part 2: What would your total score be if everything goes exactly according to your strategy guide?"
 				))
 	);
-	files.put(d, genericFileMap);
-	headerParts.get(d).putAll(genericHeaderPartsMap);
 	
 	// 3
 	d++;
@@ -40,8 +30,6 @@ public class AoC2022Controller extends GenericController {
               			, "part2", "Part 2: Find the item type that corresponds to the badges of each three-Elf group. What is the sum of the priorities of those item types?"
 				))
 	);
-	files.put(d, genericFileMap);
-	headerParts.get(d).putAll(genericHeaderPartsMap);
 	
 
 	// 4
@@ -51,8 +39,6 @@ public class AoC2022Controller extends GenericController {
               			, "part2", "Part 2: In how many assignment pairs do the ranges overlap?"
 				))
 	);
-	files.put(d, genericFileMap);
-	headerParts.get(d).putAll(genericHeaderPartsMap);
     }
 
     @Override

@@ -12,16 +12,13 @@ public class AoQ2023Controller extends GenericController {
     Button backButton;
 
     public AoQ2023Controller() {
-	Map<String, String> genericFileMap = Map.of("test", "test_input.txt", "test2", "test_input2.txt", "solve",
-		"input.txt", "part1", "input.txt", "part2", "input.txt");
-
-	Map<String, String> genericHeaderPartsMap = Map.of("test", "Test Input", "test2", "Test Input 2");
+	super();
+	
 	// -1
 	int d = -1;
 	headers.put(d, "Day -1: Hello World.");
 	headerParts.put(d, new HashMap<>(Map.of("part1",
 		"Part 1: What is the value of \"x\" that the bot used in their program that would have produced the provided output?")));
-	files.put(d, genericFileMap);
 	headerParts.get(d).putAll(genericHeaderPartsMap);
 
 	// 0
@@ -36,8 +33,12 @@ public class AoQ2023Controller extends GenericController {
 	d++;
 	headers.put(d, "Day 1: Sedrick is odd... really odd.");
 	headerParts.put(d, new HashMap<>(Map.of("solve", "Find the 11111th odd odd number.")));
-	files.put(d, genericFileMap);
-	headerParts.get(d).putAll(genericHeaderPartsMap);
+	
+
+	// Day 2: Prime Feeding Time!
+	d++;
+	headers.put(d, "Day 2: Prime Feeding Time!");
+	headerParts.put(d, new HashMap<>(Map.of("solve", "Given this pattern, how many times in a day will Sedrick eat?")));
     }
 
     @Override
