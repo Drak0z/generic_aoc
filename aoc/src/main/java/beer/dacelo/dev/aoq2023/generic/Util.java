@@ -14,25 +14,31 @@ public class Util {
 	Alert alert = new Alert(AlertType.INFORMATION);
 	alert.setTitle(title);
 	alert.setHeaderText(header);
-	alert.setContentText(content);
-	
+	TextArea answerTextArea = new TextArea(content);
+	answerTextArea.setFont(Font.font("Consolas", FontWeight.THIN, 12));
+	answerTextArea.setPrefHeight(12.0);
+	answerTextArea.setMaxWidth(Double.MAX_VALUE);
+	answerTextArea.setMaxHeight(Double.MAX_VALUE);
+	GridPane.setVgrow(answerTextArea, Priority.ALWAYS);
+	GridPane.setHgrow(answerTextArea, Priority.ALWAYS);
+	alert.getDialogPane().setContent(answerTextArea);
 
-	if (detail.length() > 0 ) {
-        	Label lbl = new Label("Detailed output:");
-        	TextArea textArea = new TextArea(detail);
-        	textArea.setFont(Font.font("Consolas", FontWeight.THIN, 12));
-        	textArea.setMaxWidth(Double.MAX_VALUE);
-        	textArea.setMaxHeight(Double.MAX_VALUE);
-        	GridPane.setVgrow(textArea,  Priority.ALWAYS);
-        	GridPane.setHgrow(textArea,  Priority.ALWAYS);
-        	
-        	GridPane expContent = new GridPane();
-        	expContent.setMaxWidth(Double.MAX_VALUE);
-        	expContent.add(lbl, 0,0);
-        	expContent.add(textArea, 0, 1);
-        	alert.getDialogPane().setExpandableContent(expContent);
+	if (detail.length() > 0) {
+	    Label lbl = new Label("Detailed output:");
+	    TextArea detailTextArea = new TextArea(detail);
+	    detailTextArea.setFont(Font.font("Consolas", FontWeight.THIN, 12));
+	    detailTextArea.setMaxWidth(Double.MAX_VALUE);
+	    detailTextArea.setMaxHeight(Double.MAX_VALUE);
+	    GridPane.setVgrow(detailTextArea, Priority.ALWAYS);
+	    GridPane.setHgrow(detailTextArea, Priority.ALWAYS);
+
+	    GridPane expContent = new GridPane();
+	    expContent.setMaxWidth(Double.MAX_VALUE);
+	    expContent.add(lbl, 0, 0);
+	    expContent.add(detailTextArea, 0, 1);
+	    alert.getDialogPane().setExpandableContent(expContent);
 	}
-	
+
 	alert.showAndWait();
     }
 }
