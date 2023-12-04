@@ -23,7 +23,11 @@ public class Util {
     public static Boolean isPrime(Integer n) {
 	if (n <= 1)
 	    return false;
-	for (int i = 2; i <= Math.sqrt(n); i++) {
+	if (n == 2)
+	    return true;
+	if (n % 2 == 0)
+	    return false;
+	for (int i = 3; i <= Math.sqrt(n); i += 2) {
 	    if (n % i == 0)
 		return false;
 	}
@@ -39,7 +43,11 @@ public class Util {
     public static Boolean isPrime(Long n) {
 	if (n <= 1)
 	    return false;
-	for (Long i = 2L; i <= Math.sqrt(n); i++) {
+	if (n == 2)
+	    return true;
+	if (n % 2 == 0)
+	    return false;
+	for (Long i = 3L; i <= Math.sqrt(n); i += 2) {
 	    if (n % i == 0)
 		return false;
 	}
@@ -57,7 +65,12 @@ public class Util {
 	    return false;
 	if (n % 1 != 0)
 	    return false;
-	for (Double i = 2.0; i <= Math.sqrt(n); i++) {
+
+	if (n == 2)
+	    return true;
+	if (n % 2 == 0)
+	    return false;
+	for (Double i = 3.0; i <= Math.sqrt(n); i += 2) {
 	    if (n % i == 0)
 		return false;
 	}
@@ -72,9 +85,13 @@ public class Util {
      */
     public static Boolean isPrime(BigInteger n) {
 	if (n.compareTo(BigInteger.ONE) <= 0)
-	    return false; // we're not a whole number
-	for (BigInteger i = new BigInteger("2"); i.compareTo(n.sqrt()) <= 0; i = i.add(BigInteger.ONE)) {
-	    if ((n.remainder(i)).compareTo(BigInteger.ZERO) == 0)
+	    return false;
+	if (n.equals(new BigInteger("2")))
+	    return true;
+	if ((n.remainder(new BigInteger("2"))).equals(BigInteger.ZERO))
+	    return false;
+	for (BigInteger i = new BigInteger("3"); i.compareTo(n.sqrt()) <= 0; i = i.add(new BigInteger("2"))) {
+	    if ((n.remainder(i)).equals(BigInteger.ZERO))
 		return false;
 	}
 	return true;
@@ -88,12 +105,16 @@ public class Util {
      */
     public static Boolean isPrime(BigDecimal n) {
 	if ((n.remainder(BigDecimal.ONE)).compareTo(BigDecimal.ZERO) != 0)
-	    return false;
+	    return false; // we're not a whole number
 	if (n.compareTo(BigDecimal.ONE) <= 0)
 	    return false;
-	for (BigDecimal i = new BigDecimal(2); i.compareTo(n.sqrt(new MathContext(10))) <= 0; i = i
-		.add(BigDecimal.ONE)) {
-	    if ((n.remainder(i)).compareTo(BigDecimal.ZERO) == 0)
+	if (n.equals(new BigDecimal(2)))
+	    return true;
+	if ((n.remainder(new BigDecimal(2))).equals(BigDecimal.ZERO))
+	    return false;
+	for (BigDecimal i = new BigDecimal(3); i.compareTo(n.sqrt(new MathContext(10))) <= 0; i = i
+		.add(new BigDecimal(2))) {
+	    if ((n.remainder(i)).equals(BigDecimal.ZERO))
 		return false;
 	}
 	return true;
