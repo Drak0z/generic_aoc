@@ -4,14 +4,22 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 
+import javafx.concurrent.Task;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Util {
     /**
@@ -159,4 +167,69 @@ public class Util {
 
 	alert.showAndWait();
     } // PopupWindow
+
+    
+    public static class ProgressForm {
+        private final Stage dialogStage;
+        private final ProgressBar pb = new ProgressBar();
+
+        public ProgressForm() {
+            dialogStage = new Stage();
+            dialogStage.initStyle(StageStyle.UTILITY);
+            dialogStage.setResizable(false);
+            dialogStage.initModality(Modality.APPLICATION_MODAL);
+
+            // PROGRESS BAR
+            final Label label = new Label();
+            label.setText("alerto");
+
+            pb.setProgress(-1F);
+
+            final HBox hb = new HBox();
+            hb.setSpacing(5);
+            hb.setAlignment(Pos.CENTER);
+            hb.getChildren().addAll(pb);
+
+            Scene scene = new Scene(hb);
+            dialogStage.setScene(scene);
+        }
+
+        public void activateProgressBar(final Task<?> task)  {
+            pb.progressProperty().bind(task.progressProperty());
+            dialogStage.show();
+        }
+
+        public Stage getDialogStage() {
+            return dialogStage;
+        }
+    } // progressForm
+    
+    private static ProgressForm loadingWindow = null;
+    private static ProgressBar progressBar = null;
+
+    public static void LoadingWindow(String title, String header, double progress, Boolean complete) {
+	if (complete) {
+//	    loadingWindow.close();
+	    loadingWindow = null;
+	    progressBar = null;
+	    return;
+	}
+	if (loadingWindow == null) {
+	    loadingWindow = new ProgressForm(); //new Alert(AlertType.NONE);
+//	    loadingWindow.setTitle(title);
+//	    loadingWindow.setHeaderText(header);
+	}
+	if (progressBar == null) {
+	    progressBar = new ProgressBar();
+//	    loadingWindow.getDialogPane().setContent(progressBar);
+	}
+	
+	updateLoadingWindow(title, header, progress, complete);
+    }
+
+    private static void updateLoadingWindow(String title, String header, double progress, Boolean complete) {
+	progressBar.setProgress(progress);
+//	loadingWindow.show();
+    } // PopupWindow
+
 }

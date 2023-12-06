@@ -52,6 +52,35 @@
 							userData="3" text="part2" />
 					</children>
 				</HBox>
+				
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 4: Scratchcards" />
+						<Button fx:id="2test1" onAction="#genericQuestion"
+							userData="4" text="test" />
+						<Button fx:id="2part1" onAction="#genericQuestion"
+							userData="4" text="part1" />
+						<Button fx:id="2test2" onAction="#genericQuestion"
+							userData="4" text="test2" />
+						<Button fx:id="2part2" onAction="#genericQuestion"
+							userData="4" text="part2" />
+					</children>
+				</HBox>
+				
+				
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 5: If You Give A Seed A Fertilizer" />
+						<Button fx:id="2test1" onAction="#genericQuestion"
+							userData="5" text="test" />
+						<Button fx:id="2part1" onAction="#genericQuestion"
+							userData="5" text="part1" />
+						<Button fx:id="2test2" onAction="#genericQuestion"
+							userData="5" text="test2" />
+						<Button fx:id="2part2" onAction="#genericQuestion"
+							userData="5" text="part2" />
+					</children>
+				</HBox>
 
 				<HBox spacing="20.0">
 					<children>

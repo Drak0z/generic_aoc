@@ -15,6 +15,36 @@ public class AoC2023Controller extends GenericController {
 				))
 	);
 	
+	d++;
+	headers.put(d, "Day 2: Cube Conundrum");
+	headerParts.put(d, new HashMap<>(Map.of("part1", "Part 1: Determine which games would have been possible if the bag had been loaded with only 12 red cubes, 13 green cubes, and 14 blue cubes. What is the sum of the IDs of those games?"
+              			, "part2", "Part 2: For each game, find the minimum set of cubes that must have been present. What is the sum of the power of these sets?"
+				))
+	);
+	
+	d++;
+	headers.put(d, "Day 3: Gear Ratios");
+	headerParts.put(d, new HashMap<>(Map.of("part1", "Part 1: What is the sum of all of the part numbers in the engine schematic?"
+              			, "part2", "Part 2: What is the sum of all of the gear ratios in your engine schematic?"
+				))
+	);
+	
+
+	d++;
+	headers.put(d, "Day 4: Scratchcards");
+	headerParts.put(d, new HashMap<>(Map.of("part1", "Part 1: Take a seat in the large pile of colorful cards. How many points are they worth in total?"
+              			, "part2", "Part 2: Process all of the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, how many total scratchcards do you end up with?"
+				))
+	);
+	
+
+	d++;
+	headers.put(d, "Day 5: If You Give A Seed A Fertilizer");
+	headerParts.put(d, new HashMap<>(Map.of("part1", "Part 1: What is the lowest location number that corresponds to any of the initial seed numbers?"
+              			, "part2", "Part 2: Process all of the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, how many total scratchcards do you end up with?"
+				))
+	);
+	
     }
 
     @Override

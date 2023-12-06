@@ -121,7 +121,8 @@ public class Day3 extends Day {
 					nrGears.put(gear,  _nrGears);
 					gearRatio.put(gear, _gearRatio);
 
-					detail.add("Found gear at " + gear + ", associating number " + numberSb + " with it");
+					detail.add("  Found gear at " + gear + ", associating number " + numberSb + " with it.");
+					detail.add("  This gear now has " + nrGears + " associated, and a gear ratio of " + gearRatio);
 				    }
 				}
 			    }
