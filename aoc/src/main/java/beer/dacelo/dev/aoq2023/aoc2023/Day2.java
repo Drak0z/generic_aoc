@@ -41,6 +41,7 @@ public class Day2 extends Day {
 	for (String line : getFileContents(input)) {
 	    String[] gameLine = line.split(":");
 	    int maxRed = 12, maxGreen = 13, maxBlue = 14;
+	    int minRed = 0, minGreen = 0, minBlue = 0;
 	    Integer gameNr = Integer.parseInt(gameLine[0].split(" ")[1].trim());
 	    String[] reveals = gameLine[1].split(";");
 	    Boolean possible = true;
@@ -63,14 +64,20 @@ public class Day2 extends Day {
 		    }
 		    if (red > maxRed || green > maxGreen || blue > maxBlue) {
 			possible = false;
-			break;
 		    }
-		}
-		if (!possible)
-		    break;
-	    }
-	    if (possible)
+		} // for (String pull : pulls)
+		minRed = Math.max(minRed, red);
+		minGreen = Math.max(minGreen, green);
+		minBlue = Math.max(minBlue, blue);
+	    } // for (String reveal : reveals)
+	    if (n == 1 && possible) {
 		result += gameNr;
+		detail.add(gameNr + " is possible (" + result + ")");
+	    }
+	    if (n == 2) {
+		result += minRed * minGreen * minBlue;
+		detail.add(gameNr + ": minRed: " + minRed + ", minGreen: " + minGreen + ", minBlue: " + minBlue + ", Power: " + (minRed*minGreen*minBlue) + ", Total: " + result);
+	    }
 
 	}
 	solver.add(result);
