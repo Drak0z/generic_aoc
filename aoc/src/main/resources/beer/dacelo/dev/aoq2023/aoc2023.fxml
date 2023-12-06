@@ -39,6 +39,19 @@
 							userData="2" text="part2" />
 					</children>
 				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 3: Gear Ratios" />
+						<Button fx:id="2test1" onAction="#genericQuestion"
+							userData="3" text="test" />
+						<Button fx:id="2part1" onAction="#genericQuestion"
+							userData="3" text="part1" />
+						<Button fx:id="2test2" onAction="#genericQuestion"
+							userData="3" text="test2" />
+						<Button fx:id="2part2" onAction="#genericQuestion"
+							userData="3" text="part2" />
+					</children>
+				</HBox>
 
 				<HBox spacing="20.0">
 					<children>
