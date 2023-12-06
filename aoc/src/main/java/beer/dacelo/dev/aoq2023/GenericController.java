@@ -19,7 +19,7 @@ public abstract class GenericController {
     Map<String, String> genericHeaderPartsMap;
 
     public GenericController() {
-	genericFileMap = Map.of("test", "test_input.txt", "test2", "test_input.txt", "part1", "input.txt", "part2",
+	genericFileMap = Map.of("test", "test_input.txt", "test2", "test_input2.txt", "part1", "input.txt", "part2",
 		"input.txt", "solve",
 		"input.txt");
 	genericHeaderPartsMap = Map.of("test", "Test Input", "test2", "Test Input 2");

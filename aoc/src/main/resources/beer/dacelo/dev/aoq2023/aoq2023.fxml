@@ -46,6 +46,24 @@
 							userData="2" text="solve" />
 					</children>
 				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 3: How Big Will He Get?!?" />
+						<Button fx:id="1test1" onAction="#genericQuestion"
+							userData="3" text="test" />
+						<Button fx:id="1part1" onAction="#genericQuestion"
+							userData="3" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 4: Candy Genetics" />
+						<Button fx:id="1test1" onAction="#genericQuestion"
+							userData="4" text="test" />
+						<Button fx:id="1part1" onAction="#genericQuestion"
+							userData="4" text="solve" />
+					</children>
+				</HBox>
 
 				<HBox spacing="20.0">
 					<children>

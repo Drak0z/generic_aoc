@@ -1,12 +1,7 @@
 package beer.dacelo.dev.aoq2023.aoq2023;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import beer.dacelo.dev.aoq2023.generic.Day;
 
@@ -57,7 +52,7 @@ public class Day1 extends Day {
 	case '3':
 	    suffix = "rd";
 	    break;
-	}
+	} // switch
 
 	detail.add("We're trying to find the " + (nthNumberToFind) + suffix + " odd odd number");
 	Integer oddFound = 0;
@@ -71,17 +66,17 @@ public class Day1 extends Day {
 		oddoddFound++;
 		detail.add("Number: " + number + ", n%2: " + (number % 2) + ", oddFound: " + oddFound
 			+ ", oddoddFound: " + oddoddFound);
-	    }
-	}
+	    } // if
+	} // while
 
 	detail.add("Number: " + number + " is the " + nthNumberToFind + suffix + " odd odd number!");
 	solver.add(number);
-    }
+    } // solve
 
     @Override
     public List<String> getSolution(int n) {
 	solution = new ArrayList<String>();
 	solution.add(Integer.toString(solver.get(0)));
 	return solution;
-    }
+    } // getSolution
 }

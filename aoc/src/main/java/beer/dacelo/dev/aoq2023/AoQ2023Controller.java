@@ -39,6 +39,17 @@ public class AoQ2023Controller extends GenericController {
 	d++;
 	headers.put(d, "Day 2: Prime Feeding Time!");
 	headerParts.put(d, new HashMap<>(Map.of("solve", "Given this pattern, how many times in a day will Sedrick eat?")));
+	
+
+	// Day 3:How Big Will He Get?!?
+	d++;
+	headers.put(d, "Day 3: How Big Will He Get?!?");
+	headerParts.put(d, new HashMap<>(Map.of("solve", "Given this pattern, how many times in a day will Sedrick eat?")));
+
+	// Day 4: Prime Feeding Time!
+	d++;
+	headers.put(d, "Day 4: Candy Genetics");
+	headerParts.put(d, new HashMap<>(Map.of("solve", "How many unique and valid 6 base sequences are in Sedrick's DNA?")));
     }
 
     @Override

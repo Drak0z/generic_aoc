@@ -9,6 +9,7 @@
    <children>
       <Label text="Select your Challenge" />
       <Button fx:id="aoc2022button" text="Advent of Code 2022" onAction="#switchToAoC2022"/>
+      <Button fx:id="aoc2022button" text="Advent of Code 2023" onAction="#switchToAoC2023"/>
       <Button fx:id="aoq2023button" text="Advent of Qode 2023" onAction="#switchToAoQ2023"/>
    </children>
    <padding>

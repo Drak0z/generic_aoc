@@ -14,6 +14,10 @@ public class PrimaryController {
         App.setRoot("aoc2022");
     }
     @FXML
+    private void switchToAoC2023() throws IOException {
+        App.setRoot("aoc2023");
+    }
+    @FXML
     private void switchToAoQ2023() throws IOException {
         App.setRoot("aoq2023");
     }
