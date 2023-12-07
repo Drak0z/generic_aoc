@@ -1,5 +1,7 @@
 package beer.dacelo.dev.aoq2023.aoc2023;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -40,24 +42,31 @@ public class Day5 extends Day {
     private class DataMapper {
 	List<String> inputs;
 	String name;
+	List<List<Long>> maps;
 
 	public DataMapper(String name) {
 	    this.name = name;
 	    inputs = new ArrayList<String>();
+	    maps = new ArrayList<List<Long>>();
 	}
 
-	public void addInput(String input) {
-	    inputs.add(input);
+	public void addInput(String s) {
+	    inputs.add(s);
+	    String[] input = s.split(" ");
+	    Long destination = Long.parseLong(input[0]);
+	    Long source = Long.parseLong(input[1]);
+	    Long length = Long.parseLong(input[2]);
+	    List<Long> map = new ArrayList<Long>();
+	    map.add(destination);
+	    map.add(source);
+	    map.add(length);
+	    maps.add(map);
 	}
 
 	public Long convert(Long value) {
-	    for (String s : inputs) {
-		String[] input = s.split(" ");
-		Long destination = Long.parseLong(input[0]);
-		Long source = Long.parseLong(input[1]);
-		Long length = Long.parseLong(input[2]);
-		if (value >= source && value <= source + length) {
-		    return (value - source) + destination;
+	    for (List<Long> map : maps) {
+		if (value >= map.get(1) && value <= map.get(1) + map.get(2)) {
+		    return (value - map.get(1)) + map.get(0);
 		}
 	    }
 	    return value;
@@ -155,19 +164,34 @@ public class Day5 extends Day {
 		lowestLocation = Math.min(lowestLocation, location);
 	    }
 	} else if (n == 2) {
+	    // CPU GOES BRRRRRRRRRRRR
+	    // Takes minutes to solve this way, there must be a better way to solve this,
+	    // eventually? For now, I've got the right answer :D
+	    Long totalSeeds = 0L;
+	    DecimalFormat df = new DecimalFormat("#.##");
+	    df.setRoundingMode(RoundingMode.HALF_UP);
 	    Map<Long, Long> seedMap = sm.getAllSeeds();
+	    for (Long v : seedMap.values()) {
+		totalSeeds += v;
+	    }
+	    
+	    Long seedCounter = 0L;
 	    for (Long l : seedMap.keySet()) {
 		System.out.println("Processing: " + l + ", " + seedMap.get(l) + ", lowestLocation = " + lowestLocation);
 		for (Long i = 0L; i < seedMap.get(l); i++) {
+		    seedCounter++;
 		    Long seed = l + i;
 		    Long location = 0L;
-		    /* if (i % 1000 == 0) {
+		    if (seedCounter % 100000 == 0) {
 			String header = "Processing: " + l + ", " + seedMap.get(l) + ", lowestLocation = "
 				+ lowestLocation;
-			Double progress = i.doubleValue() / seedMap.get(l).doubleValue();
-			Util.LoadingWindow("Loading... " + progress + "%", header, progress, false); // LoadingWindow("Loading...",
-										   // header,
-		    } */
+			Double seedMapProgress = i.doubleValue() / seedMap.get(l).doubleValue() * 100;
+//			Util.LoadingWindow("Loading... " + progress + "%", header, progress, false); // LoadingWindow("Loading...",
+			// header,
+			Double totalProgress = seedCounter.doubleValue() / totalSeeds.doubleValue() * 100;
+			System.out.println("[" + df.format(totalProgress) + "%] - Progress of this seedMap (" + l + " -> " + i + ", " + seedMap.get(l) + "): "
+				+ df.format(seedMapProgress) + "% - " + lowestLocation);
+		    }
 		    location = humidityToLocation
 			    .convert(temperatureToHumidity.convert(lightToTemperature.convert(waterToLight.convert(
 				    fertilizerToWater.convert(soilToFertilizer.convert(seedToSoil.convert(seed))))))); // ?

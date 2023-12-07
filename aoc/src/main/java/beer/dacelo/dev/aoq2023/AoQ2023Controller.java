@@ -50,6 +50,11 @@ public class AoQ2023Controller extends GenericController {
 	d++;
 	headers.put(d, "Day 4: Candy Genetics");
 	headerParts.put(d, new HashMap<>(Map.of("solve", "How many unique and valid 6 base sequences are in Sedrick's DNA?")));
+	
+	// Day 5: The giant blob blast of 2023!
+	d++;
+	headers.put(d, "Day 4: Candy Genetics");
+	headerParts.put(d, new HashMap<>(Map.of("solve", "How many unique and valid 6 base sequences are in Sedrick's DNA?")));
     }
 
     @Override

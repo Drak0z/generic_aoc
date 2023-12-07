@@ -1,0 +1,15 @@
+X,X,X,X,X,X,X,S,X,X,X,X,X,X,X
+X,X,X,X,X,X,S,E,S,X,X,X,X,X,X
+X,X,X,X,X,S,E,D,E,S,X,X,X,X,X
+X,X,X,X,S,E,D,R,D,E,S,X,X,X,X
+X,X,X,S,E,D,R,I,R,D,E,S,X,X,X
+X,X,S,E,D,R,I,C,I,R,D,E,S,X,X
+X,S,E,D,R,I,C,K,C,I,R,D,E,S,X
+S,E,D,R,I,C,K,K,K,C,I,R,D,E,S
+X,S,E,D,R,I,C,K,C,I,R,D,E,S,X
+X,X,S,E,D,R,I,C,I,R,D,E,S,X,X
+X,X,X,S,E,D,R,I,R,D,E,S,X,X,X
+X,X,X,X,S,E,D,R,D,E,S,X,X,X,X
+X,X,X,X,X,S,E,D,E,S,X,X,X,X,X
+X,X,X,X,X,X,S,E,S,X,X,X,X,X,X
+X,X,X,X,X,X,X,S,X,X,X,X,X,X,X
