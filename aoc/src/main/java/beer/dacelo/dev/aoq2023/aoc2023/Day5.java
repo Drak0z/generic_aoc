@@ -3,13 +3,11 @@ package beer.dacelo.dev.aoq2023.aoc2023;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import beer.dacelo.dev.aoq2023.generic.Day;
-import beer.dacelo.dev.aoq2023.generic.Util;
 
 public class Day5 extends Day {
     List<Long> solver = new ArrayList<Long>();
@@ -79,7 +77,6 @@ public class Day5 extends Day {
 
     @Override
     public void solve(int n) {
-	Long result = 0L;
 	String processing = "";
 
 	List<Long> seeds = new ArrayList<Long>();
@@ -183,8 +180,8 @@ public class Day5 extends Day {
 		    Long seed = l + i;
 		    Long location = 0L;
 		    if (seedCounter % 100000 == 0) {
-			String header = "Processing: " + l + ", " + seedMap.get(l) + ", lowestLocation = "
-				+ lowestLocation;
+//			String header = "Processing: " + l + ", " + seedMap.get(l) + ", lowestLocation = "
+//				+ lowestLocation;
 			Double seedMapProgress = i.doubleValue() / seedMap.get(l).doubleValue() * 100;
 //			Util.LoadingWindow("Loading... " + progress + "%", header, progress, false); // LoadingWindow("Loading...",
 			// header,

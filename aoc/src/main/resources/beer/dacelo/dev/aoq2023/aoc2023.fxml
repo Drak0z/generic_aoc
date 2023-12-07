@@ -82,6 +82,20 @@
 					</children>
 				</HBox>
 
+
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 6: Wait For It" />
+						<Button fx:id="2test1" onAction="#genericQuestion"
+							userData="6" text="test" />
+						<Button fx:id="2part1" onAction="#genericQuestion"
+							userData="6" text="part1" />
+						<Button fx:id="2test2" onAction="#genericQuestion"
+							userData="6" text="test2" />
+						<Button fx:id="2part2" onAction="#genericQuestion"
+							userData="6" text="part2" />
+					</children>
+				</HBox>
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Return to Main" />
