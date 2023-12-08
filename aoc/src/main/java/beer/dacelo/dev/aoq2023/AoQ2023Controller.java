@@ -13,7 +13,7 @@ public class AoQ2023Controller extends GenericController {
 
     public AoQ2023Controller() {
 	super();
-	
+
 	// -1
 	int d = -1;
 	headers.put(d, "Day -1: Hello World.");
@@ -33,28 +33,36 @@ public class AoQ2023Controller extends GenericController {
 	d++;
 	headers.put(d, "Day 1: Sedrick is odd... really odd.");
 	headerParts.put(d, new HashMap<>(Map.of("solve", "Find the 11111th odd odd number.")));
-	
 
 	// Day 2: Prime Feeding Time!
 	d++;
 	headers.put(d, "Day 2: Prime Feeding Time!");
-	headerParts.put(d, new HashMap<>(Map.of("solve", "Given this pattern, how many times in a day will Sedrick eat?")));
-	
+	headerParts.put(d,
+		new HashMap<>(Map.of("solve", "Given this pattern, how many times in a day will Sedrick eat?")));
 
 	// Day 3:How Big Will He Get?!?
 	d++;
 	headers.put(d, "Day 3: How Big Will He Get?!?");
-	headerParts.put(d, new HashMap<>(Map.of("solve", "Given this pattern, how many times in a day will Sedrick eat?")));
+	headerParts.put(d,
+		new HashMap<>(Map.of("solve", "Given this pattern, how many times in a day will Sedrick eat?")));
 
 	// Day 4: Prime Feeding Time!
 	d++;
 	headers.put(d, "Day 4: Candy Genetics");
-	headerParts.put(d, new HashMap<>(Map.of("solve", "How many unique and valid 6 base sequences are in Sedrick's DNA?")));
-	
+	headerParts.put(d,
+		new HashMap<>(Map.of("solve", "How many unique and valid 6 base sequences are in Sedrick's DNA?")));
+
 	// Day 5: The giant blob blast of 2023!
 	d++;
-	headers.put(d, "Day 4: Candy Genetics");
-	headerParts.put(d, new HashMap<>(Map.of("solve", "How many unique and valid 6 base sequences are in Sedrick's DNA?")));
+	headers.put(d, "Day 5: The giant blob blast of 2023!");
+	headerParts.put(d, new HashMap<>(Map.of("solve",
+		"Using this dispersal map and the same key, how many pieces did Sedrick blow up into?")));
+
+	// Day 6: We Were Wrong. Maybe Doubly Wrong??
+	d++;
+	headers.put(d, "Day 6: We Were Wrong. Maybe Doubly Wrong??");
+	headerParts.put(d, new HashMap<>(Map.of("solve",
+		"If he doubles in weight every day, on which day will his weight surpass that of the earth?")));
     }
 
     @Override

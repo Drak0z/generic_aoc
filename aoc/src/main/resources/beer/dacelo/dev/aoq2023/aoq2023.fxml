@@ -73,6 +73,15 @@
 							userData="5" text="solve" />
 					</children>
 				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 6: We Were Wrong. Maybe Doubly Wrong??" />
+						<Button fx:id="1test1" onAction="#genericQuestion"
+							userData="6" text="test" />
+						<Button fx:id="1part1" onAction="#genericQuestion"
+							userData="6" text="solve" />
+					</children>
+				</HBox>
 
 				<HBox spacing="20.0">
 					<children>
