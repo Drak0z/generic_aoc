@@ -7,7 +7,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class AoC2023Controller extends GenericController {
-    @FXML Button backButton, part1, part2, test1, test2;
+    @FXML
+    Button backButton, part1, part2, test1, test2;
 
     public AoC2023Controller() {
 	super();
@@ -57,6 +58,20 @@ public class AoC2023Controller extends GenericController {
 	headerParts.put(d, new HashMap<>(Map.of("part1",
 		"Part 1: Find the rank of every hand in your set. What are the total winnings?", "part2",
 		"Part 2: Process all of the original and copied scratchcards until no more scratchcards are won. Including the original set of scratchcards, how many total scratchcards do you end up with?")));
+
+	d++;
+	headers.put(d, "DDay 8: Haunted Wasteland");
+	headerParts.put(d, new HashMap<>(Map.of("part1",
+		"Part 1: Starting at AAA, follow the left/right instructions. How many steps are required to reach ZZZ?",
+		"part2",
+		"Part 2: Simultaneously start on every node that ends with A. How many steps does it take before you're only on nodes that end with Z?")));
+
+	d++;
+	headers.put(d, "Day 9: Mirage Maintenance");
+	headerParts.put(d, new HashMap<>(Map.of("part1",
+		"Part 1: Analyze your OASIS report and extrapolate the next value for each history. What is the sum of these extrapolated values?",
+		"part2",
+		"Part 2: Analyze your OASIS report again, this time extrapolating the previous value for each history. What is the sum of these extrapolated values?")));
     }
 
     @Override
