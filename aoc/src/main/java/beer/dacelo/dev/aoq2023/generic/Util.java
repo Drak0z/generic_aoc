@@ -3,6 +3,7 @@ package beer.dacelo.dev.aoq2023.generic;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
+import java.util.Arrays;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -160,4 +161,15 @@ public class Util {
 	alert.showAndWait();
     } // PopupWindow
 
+    private static Long gcd(Long x, Long y) {
+	return (y == 0) ? x : gcd(y, x % y);
+    }
+
+    public static Long gcd(Long... numbers) {
+	return Arrays.stream(numbers).reduce(0L, (x, y) -> gcd(x, y));
+    }
+
+    public static Long lcm(Long... numbers) {
+	return Arrays.stream(numbers).reduce(1L, (x, y) -> x * (y / gcd(x, y)));
+    }
 }

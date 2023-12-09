@@ -16,39 +16,39 @@
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 1: Trebuchet?!" />
-						<Button fx:id="1test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="1" text="test" />
-						<Button fx:id="1part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="1" text="part1" />
-						<Button fx:id="1test2" onAction="#genericQuestion"
+						<Button fx:id="test2" onAction="#genericQuestion"
 							userData="1" text="test2" />
-						<Button fx:id="1part2" onAction="#genericQuestion"
+						<Button fx:id="part2" onAction="#genericQuestion"
 							userData="1" text="part2" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 2: Cube Conundrum" />
-						<Button fx:id="2test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="2" text="test" />
-						<Button fx:id="2part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="2" text="part1" />
-						<Button fx:id="2test2" onAction="#genericQuestion"
+						<Button fx:id="test2" onAction="#genericQuestion"
 							userData="2" text="test2" />
-						<Button fx:id="2part2" onAction="#genericQuestion"
+						<Button fx:id="part2" onAction="#genericQuestion"
 							userData="2" text="part2" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 3: Gear Ratios" />
-						<Button fx:id="2test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="3" text="test" />
-						<Button fx:id="2part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="3" text="part1" />
-						<Button fx:id="2test2" onAction="#genericQuestion"
+						<Button fx:id="test2" onAction="#genericQuestion"
 							userData="3" text="test2" />
-						<Button fx:id="2part2" onAction="#genericQuestion"
+						<Button fx:id="part2" onAction="#genericQuestion"
 							userData="3" text="part2" />
 					</children>
 				</HBox>
@@ -56,13 +56,13 @@
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 4: Scratchcards" />
-						<Button fx:id="2test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="4" text="test" />
-						<Button fx:id="2part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="4" text="part1" />
-						<Button fx:id="2test2" onAction="#genericQuestion"
+						<Button fx:id="test2" onAction="#genericQuestion"
 							userData="4" text="test2" />
-						<Button fx:id="2part2" onAction="#genericQuestion"
+						<Button fx:id="part2" onAction="#genericQuestion"
 							userData="4" text="part2" />
 					</children>
 				</HBox>
@@ -71,13 +71,13 @@
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 5: If You Give A Seed A Fertilizer" />
-						<Button fx:id="2test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="5" text="test" />
-						<Button fx:id="2part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="5" text="part1" />
-						<Button fx:id="2test2" onAction="#genericQuestion"
+						<Button fx:id="test2" onAction="#genericQuestion"
 							userData="5" text="test2" />
-						<Button fx:id="2part2" onAction="#genericQuestion"
+						<Button fx:id="part2" onAction="#genericQuestion"
 							userData="5" text="part2" />
 					</children>
 				</HBox>
@@ -85,13 +85,13 @@
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 6: Wait For It" />
-						<Button fx:id="2test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="6" text="test" />
-						<Button fx:id="2part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="6" text="part1" />
-						<Button fx:id="2test2" onAction="#genericQuestion"
+						<Button fx:id="test2" onAction="#genericQuestion"
 							userData="6" text="test2" />
-						<Button fx:id="2part2" onAction="#genericQuestion"
+						<Button fx:id="part2" onAction="#genericQuestion"
 							userData="6" text="part2" />
 					</children>
 				</HBox>
@@ -99,14 +99,27 @@
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 7: Camel Cards" />
-						<Button fx:id="2test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="7" text="test" />
-						<Button fx:id="2part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="7" text="part1" />
-						<Button fx:id="2test2" onAction="#genericQuestion"
+						<Button fx:id="test2" onAction="#genericQuestion"
 							userData="7" text="test2" />
-						<Button fx:id="2part2" onAction="#genericQuestion"
+						<Button fx:id="part2" onAction="#genericQuestion"
 							userData="7" text="part2" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 8: Haunted Wasteland" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="8" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="8" text="part1" />
+						<Button fx:id="test2" onAction="#genericQuestion"
+							userData="8" text="test2" />
+						<Button fx:id="part2" onAction="#genericQuestion"
+							userData="8" text="part2" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">

@@ -82,6 +82,18 @@
 							userData="6" text="solve" />
 					</children>
 				</HBox>
+				
+				
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 7: This just in, Sedrick Likes Palindromes" />
+						<Button fx:id="1test1" onAction="#genericQuestion"
+							userData="7" text="test" />
+						<Button fx:id="1part1" onAction="#genericQuestion"
+							userData="7" text="solve" />
+					</children>
+				</HBox>
+				
 
 				<HBox spacing="20.0">
 					<children>
