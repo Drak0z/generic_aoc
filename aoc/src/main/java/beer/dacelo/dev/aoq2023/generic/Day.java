@@ -9,10 +9,12 @@ import java.util.List;
 
 public abstract class Day {
     protected File input;
+    protected String filePath;
     protected List<String> solution = new ArrayList<String>();
     protected List<String> detail = new ArrayList<String>();
 
     public void setInput(String input) {
+	this.filePath = input;
 	File f = new File(input);
 	this.input = f; 
     }
@@ -30,6 +32,10 @@ public abstract class Day {
 	    e.printStackTrace();
 	}
 	return fileContents;
+    }
+    
+    public String getFilePath() {
+	return this.filePath;
     }
     
     public abstract void solve(int n);    

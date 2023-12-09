@@ -7,12 +7,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class AoQ2023Controller extends GenericController {
-
-    @FXML
-    Button backButton;
+    @FXML Button backButton, part1, part2, test1, test2;
 
     public AoQ2023Controller() {
 	super();
+	
 
 	// -1
 	int d = -1;
@@ -63,6 +62,18 @@ public class AoQ2023Controller extends GenericController {
 	headers.put(d, "Day 6: We Were Wrong. Maybe Doubly Wrong??");
 	headerParts.put(d, new HashMap<>(Map.of("solve",
 		"If he doubles in weight every day, on which day will his weight surpass that of the earth?")));
+
+	// Day 6: We Were Wrong. Maybe Doubly Wrong??
+	d++;
+	headers.put(d, "Day 7: This just in, Sedrick Likes Palindromes");
+	headerParts.put(d, new HashMap<>(Map.of("solve",
+		"Please decipher the following")));
+
+	// Day 6: We Were Wrong. Maybe Doubly Wrong??
+	d++;
+	headers.put(d, "Day 8: Muddy Earnings & Losses");
+	headerParts.put(d, new HashMap<>(Map.of("solve",
+		"Using only the values that match the checksum, calculate Sedrick's net earnings or loss. If the final amount is a loss, prefix your answer with a - sign. This data and your answer are in thousands. Sedrick is a ridiculous high-roller.")));
     }
 
     @Override

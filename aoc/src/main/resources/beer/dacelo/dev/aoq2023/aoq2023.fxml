@@ -10,20 +10,21 @@
 	xmlns="http://javafx.com/javafx/8.0.171"
 	xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="beer.dacelo.dev.aoq2023.AoQ2023Controller">
-	
+
 	<children>
 		<VBox spacing="20.0">
 			<children>
 				<HBox spacing="20.0">
 					<children>
-						<Label text = "Day -1: Hello World" />
+						<Label text="Day -1: Hello World" />
 						<Button fx:id="0test1" onAction="#genericQuestion"
 							userData="-1" text="test" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
-						<Label text = "Day 0: What Will He Eat Next? Where Will He Eat Next??" />
+						<Label
+							text="Day 0: What Will He Eat Next? Where Will He Eat Next??" />
 						<Button fx:id="0test1" onAction="#genericQuestion"
 							userData="0" text="solve" />
 					</children>
@@ -31,69 +32,77 @@
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 1: Sedrick is odd... really odd." />
-						<Button fx:id="1test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="1" text="test" />
-						<Button fx:id="1test2" onAction="#genericQuestion"
+						<Button fx:id="test2" onAction="#genericQuestion"
 							userData="1" text="test2" />
-						<Button fx:id="1part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="1" text="solve" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 2: Prime Feeding Time!" />
-						<Button fx:id="1part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="2" text="solve" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 3: How Big Will He Get?!?" />
-						<Button fx:id="1test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="3" text="test" />
-						<Button fx:id="1part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="3" text="solve" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 4: Candy Genetics" />
-						<Button fx:id="1test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="4" text="test" />
-						<Button fx:id="1part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="4" text="solve" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 5: The giant blob blast of 2023!" />
-						<Button fx:id="1test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="5" text="test" />
-						<Button fx:id="1part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="5" text="solve" />
 					</children>
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 6: We Were Wrong. Maybe Doubly Wrong??" />
-						<Button fx:id="1test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="6" text="test" />
-						<Button fx:id="1part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="6" text="solve" />
 					</children>
 				</HBox>
-				
-				
+
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 7: This just in, Sedrick Likes Palindromes" />
-						<Button fx:id="1test1" onAction="#genericQuestion"
+						<Button fx:id="test1" onAction="#genericQuestion"
 							userData="7" text="test" />
-						<Button fx:id="1part1" onAction="#genericQuestion"
+						<Button fx:id="part1" onAction="#genericQuestion"
 							userData="7" text="solve" />
 					</children>
 				</HBox>
-				
+
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 8: Muddy Earnings &amp; Losses" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="8" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="8" text="solve" />
+					</children>
+				</HBox>
 
 				<HBox spacing="20.0">
 					<children>

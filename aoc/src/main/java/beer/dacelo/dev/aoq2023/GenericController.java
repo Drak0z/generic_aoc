@@ -18,6 +18,9 @@ public abstract class GenericController {
     Map<String, String> genericFileMap;
     Map<String, String> genericHeaderPartsMap;
 
+
+    @FXML Button backButton, part1, part2, test1, test2;
+    
     public GenericController() {
 	genericFileMap = Map.of("test", "test_input.txt", "test2", "test_input2.txt", "part1", "input.txt", "part2",
 		"input.txt", "solve",

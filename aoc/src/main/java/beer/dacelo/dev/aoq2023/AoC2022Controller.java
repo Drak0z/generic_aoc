@@ -3,7 +3,11 @@ package beer.dacelo.dev.aoq2023;
 import java.util.HashMap;
 import java.util.Map;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
 public class AoC2022Controller extends GenericController {
+    @FXML Button backButton, part1, part2, test1, test2;
         
     public AoC2022Controller() {
 	super();
