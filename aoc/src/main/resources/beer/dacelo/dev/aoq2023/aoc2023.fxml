@@ -137,6 +137,19 @@
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
+						<Label text="Day 10: Pipe Maze" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="10" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="10" text="part1" />
+						<Button fx:id="test2" onAction="#genericQuestion"
+							userData="10" text="test2" />
+						<Button fx:id="part2" onAction="#genericQuestion"
+							userData="10" text="part2" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
 						<Label text="Return to Main" />
 						<Button fx:id="backButton" text="Back..."
 							onAction="#switchToPrimary" />
