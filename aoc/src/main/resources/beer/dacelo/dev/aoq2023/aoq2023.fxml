@@ -106,6 +106,15 @@
 
 				<HBox spacing="20.0">
 					<children>
+						<Label text="Day 9: Sedrick's Random Sequence Generator™" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="9" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="9" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
 						<Label text="Return to Main" />
 						<Button fx:id="backButton" text="Back..."
 							onAction="#switchToPrimary" />
