@@ -96,7 +96,7 @@ public class Day10 extends Day {
 
 	System.out.println(sturracs + " --> Contains: " + grams + "g");
 	System.out.println(d + " => siPrefix: " + siPrefix + ", Base: " + baseUnit + "  == " + grams + " g");
-	return d;
+	return grams;
     }
 
     @Override
