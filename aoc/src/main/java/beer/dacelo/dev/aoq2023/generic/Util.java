@@ -172,4 +172,88 @@ public class Util {
     public static Long lcm(Long... numbers) {
 	return Arrays.stream(numbers).reduce(1L, (x, y) -> x * (y / gcd(x, y)));
     }
+
+    public static Double getSIMultiplier(String siPrefix) {
+	Double multiplier = 1.0; // apply SI here
+	switch (siPrefix) {
+	case "q":
+	    multiplier = Math.pow(10, -30);
+	    break; // quecto
+	case "r":
+	    multiplier = Math.pow(10, -27);
+	    break; // ronto
+	case "y":
+	    multiplier = Math.pow(10, -24);
+	    break; // yocto
+	case "z":
+	    multiplier = Math.pow(10, -21);
+	    break; // zepto
+	case "a":
+	    multiplier = Math.pow(10, -18);
+	    break; // atto
+	case "f":
+	    multiplier = Math.pow(10, -15);
+	    break; // femto
+	case "p":
+	    multiplier = Math.pow(10, -12);
+	    break; // pico
+	case "n":
+	    multiplier = Math.pow(10, -9);
+	    break; // nano
+	case "μ":
+	    multiplier = Math.pow(10, -6);
+	    break; // micro
+	case "m":
+	    multiplier = Math.pow(10, -3);
+	    break; // milli
+	case "c":
+	    multiplier = Math.pow(10, -2);
+	    break; // centi
+	case "d":
+	    multiplier = Math.pow(10, -1);
+	    break; // deci
+	case "":
+	    multiplier = Math.pow(10, 0);
+	    break; // as is
+	case "da":
+	    multiplier = Math.pow(10, 1);
+	    break; // deca
+	case "h":
+	    multiplier = Math.pow(10, 2);
+	    break; // hecto
+	case "k":
+	    multiplier = Math.pow(10, 3);
+	    break; // kilo
+	case "M":
+	    multiplier = Math.pow(10, 6);
+	    break; // mega
+	case "G":
+	    multiplier = Math.pow(10, 9);
+	    break; // giga
+	case "T":
+	    multiplier = Math.pow(10, 12);
+	    break; // tera
+	case "P":
+	    multiplier = Math.pow(10, 15);
+	    break; // peta
+	case "E":
+	    multiplier = Math.pow(10, 18);
+	    break; // exa
+	case "Z":
+	    multiplier = Math.pow(10, 21);
+	    break; // zetta
+	case "Y":
+	    multiplier = Math.pow(10, 24);
+	    break; // yotta
+	case "R":
+	    multiplier = Math.pow(10, 27);
+	    break; // ronna
+	case "Q":
+	    multiplier = Math.pow(10, 30);
+	    break; // quetta
+	default:
+	    System.err.println("PANIC! " + siPrefix);
+	}
+	return multiplier;
+    }
 }
