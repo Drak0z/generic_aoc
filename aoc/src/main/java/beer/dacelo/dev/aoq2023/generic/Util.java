@@ -135,7 +135,7 @@ public class Util {
 	alert.setHeaderText(header);
 	TextArea answerTextArea = new TextArea(content);
 	answerTextArea.setFont(Font.font("Consolas", FontWeight.THIN, 12));
-	answerTextArea.setPrefRowCount(1);
+	answerTextArea.setPrefRowCount(1+ content.length() - content.replace(System.lineSeparator(), "").length());
 	answerTextArea.setMaxWidth(Double.MAX_VALUE);
 	answerTextArea.setMaxHeight(Double.MAX_VALUE);
 	GridPane.setVgrow(answerTextArea, Priority.ALWAYS);

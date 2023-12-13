@@ -1,17 +1,11 @@
 package beer.dacelo.dev.aoq2023.aoq2023;
 
-import java.io.File;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-
-import javax.measure.Unit;
-import javax.measure.format.UnitFormat;
 
 import beer.dacelo.dev.aoq2023.generic.Day;
 import beer.dacelo.dev.aoq2023.generic.Util;

@@ -150,6 +150,32 @@
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
+						<Label text="Day 11: Cosmic Expansion" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="11" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="11" text="part1" />
+						<Button fx:id="test2" onAction="#genericQuestion"
+							userData="11" text="test2" />
+						<Button fx:id="part2" onAction="#genericQuestion"
+							userData="11" text="part2" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 12: Hot Springs" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="12" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="12" text="part1" />
+						<Button fx:id="test2" onAction="#genericQuestion"
+							userData="12" text="test2" />
+						<Button fx:id="part2" onAction="#genericQuestion"
+							userData="12" text="part2" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
 						<Label text="Return to Main" />
 						<Button fx:id="backButton" text="Back..."
 							onAction="#switchToPrimary" />
