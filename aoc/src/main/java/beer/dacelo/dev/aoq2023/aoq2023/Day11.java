@@ -157,7 +157,6 @@ public class Day11 extends Day {
 
     @Override
     public void solve(int n) {
-	Long result = 0L;
 	List<Integer> scores = new ArrayList<Integer>(List.of(0, 0, 0));
 	for (String line : getFileContents(input)) {
 	    for (int i = 0; i <= 2; i++) {
