@@ -12,6 +12,7 @@ public abstract class Day {
     protected String filePath;
     protected List<String> solution = new ArrayList<String>();
     protected List<String> detail = new ArrayList<String>();
+    protected List<String> solver = new ArrayList<String>();
 
     public void setInput(String input) {
 	this.filePath = input;
@@ -39,6 +40,15 @@ public abstract class Day {
     }
     
     public abstract void solve(int n);    
-    public List<String> getSolution(int n) { return solution; }
+
     public List<String> getDetail(int n) { return detail; }
+
+    public List<String> getSolution(int n) {
+	solution = new ArrayList<String>();
+	for (int i = 0; i < solver.size(); i++) {
+	    solution.add(solver.get(i).toString());
+	}
+	return solution;
+    } // getSolution
+    
 }

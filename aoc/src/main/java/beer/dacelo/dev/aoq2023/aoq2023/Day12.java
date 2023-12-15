@@ -43,6 +43,7 @@ public class Day12 extends Day {
 	Integer outputWidth = Integer.parseInt(fileContents.get(0));
 	String inputLine = fileContents.get(1);
 	Integer outputHeight = inputLine.length() / outputWidth;
+		
 	List<StringBuilder> sbArray = new ArrayList<StringBuilder>();
 	for (int i = 0; i < outputHeight; i++) {
 	    sbArray.add(new StringBuilder());
@@ -59,7 +60,14 @@ public class Day12 extends Day {
 		y = i % outputHeight;
 	    else
 		y = outputHeight - (i % outputHeight) - 1;
-
+	    
+	    // doesn't work, I am misinterpreting wikipedia clearly. let's try to write it in more variables...
+	    // double sawtoothY = a * Math.abs(((i-(p/4))%p) - (p/2));
+	    double period = outputHeight*2.0;  // Period of the triangle wave
+	    double amplitude = outputHeight; // Amplitude of the triangle wave
+	    double phase = (i + period / 2.0) % period; // Shift phase by half-period
+	    double triangleY = (amplitude * Math.abs((phase - period / 2.0) / (period / 2.0)));
+	    System.out.println(" i: " + i + ", y: " + y + ", triangleY: " + triangleY + " delta: " + (y - triangleY));
 	    sbArray.get(y).append(inputLine.charAt(i));
 	}
 
