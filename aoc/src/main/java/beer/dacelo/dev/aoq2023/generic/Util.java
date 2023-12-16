@@ -3,6 +3,7 @@ package beer.dacelo.dev.aoq2023.generic;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
+import java.time.Duration;
 import java.util.Arrays;
 
 import javafx.scene.control.Alert;
@@ -135,7 +136,7 @@ public class Util {
 	alert.setHeaderText(header);
 	TextArea answerTextArea = new TextArea(content);
 	answerTextArea.setFont(Font.font("Consolas", FontWeight.THIN, 12));
-	answerTextArea.setPrefRowCount(1+ content.length() - content.replace(System.lineSeparator(), "").length());
+	answerTextArea.setPrefRowCount(1 + content.length() - content.replace(System.lineSeparator(), "").length());
 	answerTextArea.setMaxWidth(Double.MAX_VALUE);
 	answerTextArea.setMaxHeight(Double.MAX_VALUE);
 	GridPane.setVgrow(answerTextArea, Priority.ALWAYS);
@@ -255,5 +256,33 @@ public class Util {
 	    System.err.println("PANIC! " + siPrefix);
 	}
 	return multiplier;
+    }
+
+    private static long startTime, endTime, elapsedTime;
+
+    public static void startTimer() {
+	startTime = System.nanoTime();
+    }
+
+    public static void endTimer() {
+	endTime = System.nanoTime();
+	elapsedTime = endTime - startTime;
+    }
+
+    public static long getElapsedTime() {
+	return elapsedTime;
+    }
+
+    public static String getDuration() {
+	Duration duration = Duration.ofNanos(elapsedTime);
+	StringBuilder sb = new StringBuilder();
+	if (duration.toDays() > 0) sb.append(String.format("%02 Day ", duration.toDays()));
+	if (duration.toHours() > 0)  sb.append(String.format("%02 Hour ", duration.toHours() % 24));
+	if (duration.toHours() > 0)  sb.append(String.format("%02 Minutes ", duration.toMinutes() % 60));
+	if (duration.toHours() > 0)  sb.append(String.format("%02 Seconds ", duration.toSeconds() % 60));
+	if (duration.toHours() > 0)  sb.append(String.format("%02 Millisecond ", duration.toMillis() % 1000));
+	if (duration.toHours() > 0)  sb.append(String.format("%02 Nanosecond ", duration.toNanos() % 1000000L));
+	
+	return sb.toString().trim();
     }
 }

@@ -3,6 +3,7 @@ package beer.dacelo.dev.aoq2023.aoq2023;
 import java.math.BigInteger;
 
 import beer.dacelo.dev.aoq2023.generic.Day;
+import beer.dacelo.dev.aoq2023.generic.Util;
 
 public class Day13 extends Day {
     /**
@@ -36,6 +37,7 @@ public class Day13 extends Day {
     }
 
     public BigInteger getNthSedonacci(Long n) {
+	Util.startTimer();
 	BigInteger sedOne, sedTwo;
 	sedOne = BigInteger.valueOf(11L);
 	sedTwo = BigInteger.valueOf(11L);
@@ -46,6 +48,10 @@ public class Day13 extends Day {
 	    sedOne = sedTwo;
 	    sedTwo = sedThree;
 	}
+
+	Util.endTimer();
+
+	System.out.println("Sequence number " + n + " took " + Util.getDuration() + " to solve");
 	return sedOne;
     }
 
@@ -56,6 +62,7 @@ public class Day13 extends Day {
 	    System.out.println(i + ". " + getNthSedonacci(i));
 	}
 	BigInteger solution = getNthSedonacci(x);
+	
 	solver.add(x + ". " + solution);
 	System.out.println(x + ". " + solution);
     } // solve
