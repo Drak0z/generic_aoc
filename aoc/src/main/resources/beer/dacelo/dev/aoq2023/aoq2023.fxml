@@ -113,7 +113,7 @@
 							userData="9" text="solve" />
 					</children>
 				</HBox>
-				
+
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 10: Weighty Ideas" />
@@ -123,7 +123,7 @@
 							userData="10" text="solve" />
 					</children>
 				</HBox>
-				
+
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 11: Sedrick the Gin Rummy card shark!" />
@@ -133,7 +133,7 @@
 							userData="11" text="solve" />
 					</children>
 				</HBox>
-				
+
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 12: Deep Ticker Tape Thoughts" />
@@ -143,7 +143,7 @@
 							userData="12" text="solve" />
 					</children>
 				</HBox>
-				
+
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 13: The Sedronacci Sequence!!" />
@@ -153,7 +153,7 @@
 							userData="13" text="solve" />
 					</children>
 				</HBox>
-				
+
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Day 14: Sedrick: the ingredients.." />
@@ -163,7 +163,17 @@
 							userData="14" text="solve" />
 					</children>
 				</HBox>
-				
+
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 15: Bananalytics" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="15" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="15" text="solve" />
+					</children>
+				</HBox>
+
 				<HBox spacing="20.0">
 					<children>
 						<Label text="Return to Main" />
