@@ -1,0 +1,28 @@
+Sequences are made up of only these characters:
+Group 1: 
+UTF8: ✿✲✴✶✧✹✺✣✫
+and Group 2: 
+UTF8: ★●✦
+Sequences have at least one character from each group.
+Sequences do not start with multiple consecutive Group 2 characters.
+UTF8: ● 
+does not appear next to Group 1 characters or itself.
+Sequences do not contain more than 3 Group 2 characters in a row.
+These characters: 
+UTF8: ✲✴✶✹✺ 
+never appear next a Group 1 character. In other words none of 
+UTF8: ✿✲✴✶✧✹✺✣✫ 
+may be next to 
+UTF8: ✲✴✶✹✺.
+UTF8: ✿ never immediately follows a Group 1 character.
+UTF8: ✧ 
+and 
+UTF8: ✣ 
+only appear next to 
+UTF8: ✿
+.
+Sequences do not end with 
+UTF8: ✶ 
+or 
+UTF8: ✫
+.
