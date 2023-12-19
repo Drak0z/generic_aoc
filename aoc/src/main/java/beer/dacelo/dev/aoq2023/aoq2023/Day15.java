@@ -1,18 +1,11 @@
 package beer.dacelo.dev.aoq2023.aoq2023;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
-import javax.imageio.ImageIO;
-
-import beer.dacelo.dev.aoq2023.generic.ColorUtils;
 import beer.dacelo.dev.aoq2023.generic.Day;
 
 public class Day15 extends Day {
