@@ -195,6 +195,15 @@
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
+						<Label text="Day 18: Cookie Break" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="18" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="18" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
 						<Label text="Return to Main" />
 						<Button fx:id="backButton" text="Back..."
 							onAction="#switchToPrimary" />

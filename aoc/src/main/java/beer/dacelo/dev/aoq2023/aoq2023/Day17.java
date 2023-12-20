@@ -2,9 +2,7 @@ package beer.dacelo.dev.aoq2023.aoq2023;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import beer.dacelo.dev.aoq2023.generic.Day;
 
@@ -63,7 +61,6 @@ public class Day17 extends Day {
     private class Coordinate {
 	Integer x;
 	Integer y;
-	Coordinate parent;
 	Character c;
 	Boolean visited;
 
@@ -72,25 +69,9 @@ public class Day17 extends Day {
 	    this.y = y;
 	    this.c = c;
 	    this.visited = false;
-	    this.parent = null;
 	}
 
-	public Coordinate(Integer x, Integer y, Character c, Coordinate parent) {
-	    this.x = x;
-	    this.y = y;
-	    this.c = c;
-	    this.visited = false;
-	    this.parent = parent;
-	}
 	
-	public Coordinate(Coordinate c, Coordinate parent) {
-	    this.x = c.getX();
-	    this.y = c.getY();
-	    this.c = c.getC();
-	    this.visited = false;
-	    this.parent = parent;
-	}
-
 	Integer getX() {
 	    return x;
 	}
@@ -111,13 +92,6 @@ public class Day17 extends Day {
 	    return c.equals('#');
 	}
 
-	Coordinate getParent() {
-	    return parent;
-	}
-
-	void setParent(Coordinate parent) {
-	    this.parent = parent;
-	}
 
 	public String toString() {
 	    if (c.equals(' ') && isVisited())
@@ -159,27 +133,10 @@ public class Day17 extends Day {
 	    // line.chars().mapToObj(e -> (char) e).collect(Collectors.toList());
 	}
 
-	public Integer getWidth() {
-	    if (maze.size() > 0)
-		return maze.get(1).size();
-	    return 0;
-	}
-
-	public Integer getHeight() {
-	    return maze.size();
-	}
-
 	public Coordinate getStart() {
 	    return start;
 	}
 
-	public Coordinate getExit() {
-	    return exit;
-	}
-
-	public boolean isStart(int x, int y) {
-	    return (x == start.getX() && y == start.getY());
-	}
 
 	public boolean isExit(int x, int y) {
 	    return (x == exit.getX() && y == exit.getY());
@@ -258,10 +215,6 @@ public class Day17 extends Day {
 		}
 	    }
 	}
-
-	public Boolean isSolved() {
-	    return this.path != null;
-	}
     }
 
     private static int[][] DIRECTIONS = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
@@ -289,53 +242,6 @@ public class Day17 extends Day {
 	List<Coordinate> path = new ArrayList<Coordinate>();
 	if (exploreDFS(maze, maze.getStart().getX(), maze.getStart().getY(), path)) {
 	    return path;
-	}
-	return Collections.emptyList();
-    }
-
-    private List<Coordinate> backtrackPath(Coordinate cur) {
-	List<Coordinate> path = new ArrayList<Coordinate>();
-
-	Coordinate iter = cur;
-	while (iter != null) {
-	    System.out.println("[c:" + iter.getC() + ",x:" + iter.getX() + ",y:" + iter.getY() + "]");
-	    path.add(iter);
-	    iter = iter.parent;
-	}
-	return path;
-    }
-
-    public List<Coordinate> solveBFS(Maze maze) {
-	LinkedList<Coordinate> queue = new LinkedList<Coordinate>();
-	queue.add(maze.getStart());
-	while (!queue.isEmpty()) {
-	    System.out.println("Queue length: " + queue.size());
-	    Coordinate cur = queue.remove();
-	    System.out.println("Does cur have a parent? " + cur.getParent());
-
-	    if (maze.isVisited(cur.getX(), cur.getY()))
-		continue;
-
-	    if (cur.isWall()) {
-		maze.setVisited(cur.getX(), cur.getY());
-		continue;
-	    }
-
-	    if (maze.isExit(cur.getX(), cur.getY())) {
-		System.out.println("Found the exit!");
-		return backtrackPath(cur);
-	    }
-
-	    for (int[] direction : DIRECTIONS) {
-		int nextX = cur.getX() + direction[0];
-		int nextY = cur.getY() + direction[1];
-		if (maze.isValidLocation(nextX, nextY)) {
-		    Character nextC = maze.getCoordinate(nextY, nextY).getC();
-		    Coordinate next = new Coordinate(nextX, nextY, nextC, cur);
-		    queue.add(next);
-		}
-		maze.setVisited(cur.getX(), cur.getY());
-	    }
 	}
 	return Collections.emptyList();
     }
@@ -372,27 +278,6 @@ public class Day17 extends Day {
 
 	detail.add(maze.toString());
 	detail.add("");
-
-	maze.reset();
-
-	detail.add("Solving Breadth First: ");
-	output.append(", BFS: ");
-	path = solveBFS(maze);
-	System.out.println(path);
-	for (Coordinate step : path) {
-	    Character c = step.getC();
-	    switch (c) {
-	    case '#': // we should never see this in our path..
-	    case '@':
-	    case '$':
-	    case ' ':
-	    case '.':
-		break;
-	    default:
-		output.append(c);
-		break;
-	    }
-	}
 
 	maze.setSolved(path);
 	detail.add(maze.toString());
