@@ -1,8 +1,6 @@
 package beer.dacelo.dev.aoq2023.aoq2023;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -76,7 +74,7 @@ public class Day9 extends Day {
      */
     List<String> solver = new ArrayList<String>();
 
-    private int calculateNew(LinkedList<Integer> digit) {
+    public static int calculateNew(LinkedList<Integer> digit) {
 	return ((digit.get(0) % 6) + (digit.get(1) % 3) + (digit.get(2) % 5) + (digit.get(3) % 9) + (digit.get(4) % 2)
 		+ digit.get(5)) % 10;
     }
@@ -94,7 +92,7 @@ public class Day9 extends Day {
 	    detail.add("iteration: " + i + ", input digit: " + digit);
 	    int newDigit = calculateNew(digit);
 	    int outputValue = digit.removeLast(); // remove(digit.size() - 1);
-	    digit.addFirst(newDigit); //  .add(0, newDigit);
+	    digit.addFirst(newDigit); // .add(0, newDigit);
 	    detail.add("output value: " + outputValue + ", next digit: " + newDigit + " => new digit: " + digit);
 	    output.append(outputValue);
 	}
