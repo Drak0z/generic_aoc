@@ -1,0 +1,5 @@
+POST /accounting/icecream/sales HTTP/1.0
+Content-Type: application/json
+User-Agent: BlobPOS 7.3.3
+
+[{"flavor": "vanilla", "scoops": 2}, {"flavor": "banana", "scoops": 2}, {"flavor": "vanilla", "scoops": 2}, {"flavor": "banana", "scoops": 2}]
