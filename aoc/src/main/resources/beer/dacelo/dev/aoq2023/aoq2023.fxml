@@ -222,6 +222,15 @@
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
+						<Label text="Day 21: Container Positioning Unit" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="21" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="21" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
 						<Label text="Return to Main" />
 						<Button fx:id="backButton" text="Back..."
 							onAction="#switchToPrimary" />
