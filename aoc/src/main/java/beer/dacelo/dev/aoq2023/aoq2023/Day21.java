@@ -1,15 +1,9 @@
 package beer.dacelo.dev.aoq2023.aoq2023;
 
-import java.io.BufferedWriter;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import beer.dacelo.dev.aoq2023.generic.Day;
 
