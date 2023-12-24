@@ -231,6 +231,15 @@
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
+						<Label text="Day 22: Mysterious Giant Spinning Disk" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="22" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="22" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
 						<Label text="Return to Main" />
 						<Button fx:id="backButton" text="Back..."
 							onAction="#switchToPrimary" />
