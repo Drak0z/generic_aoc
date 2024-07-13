@@ -240,6 +240,15 @@
 				</HBox>
 				<HBox spacing="20.0">
 					<children>
+						<Label text="Day 23: Sedrick goes boom. For the last time." />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="23" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="23" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
 						<Label text="Return to Main" />
 						<Button fx:id="backButton" text="Back..."
 							onAction="#switchToPrimary" />

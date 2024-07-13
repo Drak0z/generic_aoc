@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="BASELINE_LEFT" spacing="20.0"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="beer.dacelo.dev.aoq2023.SoQ2024Controller">
+
+	<children>
+		<VBox spacing="20.0">
+			<children>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 1: Your Name is In What???" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="1" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="1" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 2: Hack the Water!" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="2" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="2" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 3: A Sure Bet" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="3" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="3" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 4: Wheel of Fun!" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="4" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="4" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 5: Life Support &amp; Off-by-one Rotary Encryption" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="5" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="5" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 6: What's thEE Frequency??" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="6" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="6" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 7: Clean-up" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="7" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="7" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Day 8: Horsetastrophe™" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="8" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="8" text="solve" />
+					</children>
+				</HBox>
+				<HBox spacing="20.0">
+					<children>
+						<Label text="Bonus Question: The Donut Oracle" />
+						<Button fx:id="test1" onAction="#genericQuestion"
+							userData="41" text="test" />
+						<Button fx:id="part1" onAction="#genericQuestion"
+							userData="41" text="solve" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</children>
+	<padding>
+		<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+	</padding>
+</VBox>

@@ -1,0 +1,4 @@
+Horse1	FHFHF
+Horse2	FHHBF
+Horse3	FHDHF
+Horse4	FFDHF

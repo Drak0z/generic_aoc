@@ -11,6 +11,7 @@
       <Button fx:id="aoc2022button" text="Advent of Code 2022" onAction="#switchToAoC2022"/>
       <Button fx:id="aoc2022button" text="Advent of Code 2023" onAction="#switchToAoC2023"/>
       <Button fx:id="aoq2023button" text="Advent of Qode 2023" onAction="#switchToAoQ2023"/>
+      <Button fx:id="soq2023button" text="Stampede of Qode 2024" onAction="#switchToSoQ2024"/>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

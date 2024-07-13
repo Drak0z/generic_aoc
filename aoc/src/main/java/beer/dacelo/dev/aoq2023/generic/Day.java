@@ -8,47 +8,48 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Day {
-    protected File input;
-    protected String filePath;
-    protected List<String> solution = new ArrayList<String>();
-    protected List<String> detail = new ArrayList<String>();
-    protected List<String> solver = new ArrayList<String>();
+	protected File input;
+	protected String filePath;
+	protected List<String> solution = new ArrayList<String>();
+	protected List<String> detail = new ArrayList<String>();
+	protected List<String> solver = new ArrayList<String>();
 
-    public void setInput(String input) {
-	this.filePath = input;
-	File f = new File(input);
-	this.input = f; 
-    }
-    
-
-    protected List<String> getFileContents(File input) {
-	List<String> fileContents = new ArrayList<String>();
-	try (BufferedReader reader = new BufferedReader(new FileReader(input))) {
-		String line;
-	    	while ((line = reader.readLine()) != null) {
-	    	    fileContents.add(line);
-	    	}
-	} catch (IOException e) {
-	    // TODO Auto-generated catch block
-	    e.printStackTrace();
+	public void setInput(String input) {
+		this.filePath = input;
+		File f = new File(input);
+		this.input = f;
 	}
-	return fileContents;
-    }
-    
-    public String getFilePath() {
-	return this.filePath;
-    }
-    
-    public abstract void solve(int n);    
 
-    public List<String> getDetail(int n) { return detail; }
-
-    public List<String> getSolution(int n) {
-	solution = new ArrayList<String>();
-	for (int i = 0; i < solver.size(); i++) {
-	    solution.add(solver.get(i).toString());
+	protected List<String> getFileContents(File input) {
+		List<String> fileContents = new ArrayList<String>();
+		try (BufferedReader reader = new BufferedReader(new FileReader(input))) {
+			String line;
+			while ((line = reader.readLine()) != null) {
+				fileContents.add(line);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return fileContents;
 	}
-	return solution;
-    } // getSolution
-    
+
+	public String getFilePath() {
+		return this.filePath;
+	}
+
+	public abstract void solve(int n);
+
+	public List<String> getDetail(int n) {
+		return detail;
+	}
+
+	public List<String> getSolution(int n) {
+		solution = new ArrayList<String>();
+		for (int i = 0; i < solver.size(); i++) {
+			solution.add(solver.get(i).toString());
+		}
+		return solution;
+	} // getSolution
+
 }

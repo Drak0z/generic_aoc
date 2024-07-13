@@ -8,6 +8,7 @@ public class PrimaryController {
 
     @FXML Button aoc2022button;
     @FXML Button aoq2023button;
+    @FXML Button soq2024button;
 
     @FXML
     private void switchToAoC2022() throws IOException {
@@ -20,5 +21,9 @@ public class PrimaryController {
     @FXML
     private void switchToAoQ2023() throws IOException {
         App.setRoot("aoq2023");
+    }
+    @FXML
+    private void switchToSoQ2024() throws IOException {
+        App.setRoot("soq2024");
     }
 }
